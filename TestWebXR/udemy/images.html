@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./assets/js/aframe-master.js"></script>
+    <!-- <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> -->
+
+</head>
+<body>
+    <a-scene>
+
+        <a-assets>
+            <img src="/assets/images/curved-center-50.jpg" id="curved-center-50" alt="">
+            <img src="/assets/images/curved-left-50.jpg" id="curved-left-50" alt="">
+            <img src="/assets/images/curved-right-50.jpg" id="curved-right-50" alt="">
+            <img src="/assets/images/curved-single-90.jpg" id="curved-single-90" alt="">
+            <img src="/assets/images/flat-single.jpg" id="flat-single" alt="">
+            <img src="/assets/images/image.jpg" id="image" alt="">
+        </a-assets>
+
+        <!-- IMG Height (m) = width (m) /IMG Width (px) * IMG Height (px) -->
+        <a-image
+        src="#flat-single"
+        position="0 1.5 -3"
+        width="1"
+        height="0.75"
+        scale="3 3 1"
+        ></a-image>
+
+        <!-- theta-start = 180 - ( theta-length / 2 ) -->
+        <!-- Radius of Arc, Length of Arc: https://www.handymath.com/cgi-bin/arc18.cgi?submit=Entry -->
+        <!-- Width of Arc = 1 -->
+        <!-- Angle Subtended by Arc = 90deg -->
+        <!-- IMG Height (m) = width (m) /IMG Width (px) * IMG Height (px) -->
+        <a-curvedimage
+        src="#curved-single-90"
+        theta-length="90"
+        theta-start="135"
+        radius="0.707"
+        height="0.833"
+        position="0 1.5 0"
+        scale="3 3 3"
+        ></a-curvedimage>
+
+        <!-- Width of Arc = 1 m -->
+        <!-- Length of each IMG = 0.436 m -->
+        <!-- Angle subtended by Arc = 180 deg -->
+        <!-- angle subtended by each img = 50 deg -->
+
+        <!-- Right IMG -->
+        <a-curvedimage
+        src="#curved-right-50"
+        theta-length="50"
+        theta-start="90"
+        radius="0.5"
+        height="0.327"
+        position="0 1.5 0"
+        scale="3 3 3"
+        ></a-curvedimage>
+        <!-- center IMG -->
+        <a-curvedimage
+        src="#curved-center-50"
+        theta-length="50"
+        theta-start="155"
+        radius="0.5"
+        height="0.327"
+        position="0 1.5 0"
+        scale="3 3 3"
+        ></a-curvedimage>
+        <!-- left IMG -->
+        <a-curvedimage
+        src="#curved-left-50"
+        theta-length="50"
+        theta-start="220"
+        radius="0.5"
+        height="0.327"
+        position="0 1.5 0"
+        scale="3 3 3"
+        ></a-curvedimage>
+
+        <!-- <a-box
+        color="#AA0000"
+        opacity="0.5"
+        width="3"
+        height="0.01"
+        depth="3"
+        position="0 1.5 -1.5"
+        ></a-box> -->
+
+    </a-scene>
+</body>
+</html>

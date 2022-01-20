@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./assets/js/aframe-master.js"></script>
+    <!-- <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> -->
+
+</head>
+<body>
+    <a-scene>
+
+        <a-assets>
+            <img id="bg-image" src="/assets/images/image.jpg" alt="">
+        </a-assets>
+
+        <a-image src="#bg-image" position="0 1.6 -11" scale="12 9 1"></a-image>
+
+        <a-box color="#AA0000" height="1.5" position="-1 0.5 -4"></a-box>
+
+        <a-entity
+            geometry="primitive: box;
+                        height: 1.5"
+            material="shader: standard;
+                        color: #AA0000"
+            position="1 0.5 -4"
+        ></a-entity>
+
+        <a-entity
+            geometry="primitive: cylinder;
+                        theta-length: 90;
+                        theta-start: 135;
+                        radius: 0.707;
+                        height: 0.833;
+                        open-ended: true"
+            material="shader: flat;
+                        color: #FFFFFF;
+                        side: double;
+                        src: #bg-image"
+            position="0 1.5 0"
+            scale="-10 10 10"
+        ></a-entity>
+
+    </a-scene>
+</body>
+</html>

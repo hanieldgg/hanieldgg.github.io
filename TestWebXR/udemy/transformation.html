@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./assets/js/aframe-master.js"></script>
+    <!-- <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> -->
+
+</head>
+<body>
+    <a-scene>
+        <a-box
+        color="#e74c3c"
+        width="4"
+        height="2"
+        depth="0.2"
+        position="0 1 -7"
+        rotation="90 0 0">
+            <a-circle
+            color="#3498db"
+            side="double"
+            position="2 0 0"
+            rotation="90 0 0">
+            </a-circle>
+        </a-box>
+
+        <a-circle
+        color="#34495e"
+        side="double"
+        position="-2 1 -7"
+        scale="2 2 1"></a-circle>
+
+        <a-cylinder
+        color="#616116"
+        height="2"
+        radius="2"
+        segments-radial="6"
+        open-ended="true"
+        side="double"
+        position="0 1 0"
+        rotation="0 -90 90"
+        scale="2 2 2">
+            
+        </a-cylinder>
+
+    </a-scene>
+</body>
+</html>

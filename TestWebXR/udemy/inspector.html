@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./assets/js/aframe-master.js"></script>
+    <!-- <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> -->
+
+</head>
+<body>
+    <a-scene>
+
+        <a-assets>
+            <img src="/assets/environment/ground.jpg" id="floor" alt="">
+            <img src="/assets/environment/ground-NRM.jpg" id="floor-NRM" alt="">
+
+            <a-asset-item id="light" src="assets/models/street_light/scene.gltf"></a-asset-item>
+            <a-asset-item id="traffic-light" src="assets/models/traffic_light/scene.gltf"></a-asset-item>
+
+        </a-assets>
+
+        <a-sky color="#212121"></a-sky>
+        <a-plane material="color: #FFFFFF; src: #floor; repeat: 5000 5000; normal-map: #floor-NRM; normal-texture-repeat: 5000 5000; roughnes: 0.5" rotation="-90 0 0" scale="10000 10000 1"></a-plane>
+
+        <a-entity light="type: ambient; intensity: 0.2"></a-entity>
+
+        <a-entity gltf-model="#light" scale="0.01 0.01 0.01" position="0 0.05 -5"></a-entity>
+        <a-entity gltf-model="#traffic-light" scale="0.8 0.8 .8" position="0 5 -3"></a-entity>
+        <a-entity id="red-light" position="0.008 5.308 -2.549" light="angle: 45; color: #ff0000; distance: 0.2; intensity: 100; type: point"></a-entity>
+
+        <a-entity light="angle: 45; intensity: 1.5; penumbra: 1; type: spot" position="0.895 3.687 -4.942" rotation="-90 0 0" scale="2 1 1"></a-entity>
+        <a-entity id="light-bulb" light="angle: 45; color: #ffffff; distance: 0.88; intensity: 100; type: point" position="1.039 3.711 -5.005" scale="2 2 1" visible=""></a-entity>
+
+    </a-scene>
+</body>
+</html>

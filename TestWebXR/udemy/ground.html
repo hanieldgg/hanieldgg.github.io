@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./assets/js/aframe-master.js"></script>
+    <!-- <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script> -->
+
+</head>
+<body>
+    <a-scene>
+
+        <a-assets>
+            <img src="/assets/environment/sky.jpg" id="sky" alt="">
+            <img src="/assets/environment/ground.jpg" id="floor" alt="">
+            <img src="/assets/environment/ground-NRM.jpg" id="floor-NRM" alt="">
+            <img src="/assets/environment/haniel-desk.JPG" id="haniel-desk" alt="">
+        </a-assets>
+
+        <!-- ground -->
+        <a-sky src="#sky" rotation="0 64 0"></a-sky>
+        <a-plane material="color: #FFFFFF; src: #floor; repeat: 5000 5000; normal-map: #floor-NRM; normal-texture-repeat: 5000 5000; roughnes: 0.5" rotation="-90 0 0" scale="10000 10000 1"></a-plane>
+
+        <!-- <a-sky src="#haniel-desk"></a-sky> -->
+
+    </a-scene>
+</body>
+</html>
